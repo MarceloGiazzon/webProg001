@@ -21,13 +21,20 @@
         }
 
         function draw() {
-          ellipse(50,50,80,80);
+          var r = random()*255;
+          var g = random()*255;
+          var b = random()*255;
+
+          fill(r,g,b);
+          ellipse(50,50,r,g);
             
             if (mouseIsPressed) {
               fill(0);
             } else {
-              fill(255);
+              //fill(255);
+              fill(r,g,b);
             }
+            
             ellipse(mouseX, mouseY, 80, 80);
           }
       </script>
